@@ -14,8 +14,12 @@ const app = express();
 app.get('/test', (req, res) => {
    // Reqeust => Entrando
    // Response => Saindo
-   res.send('Olá Cleisson')
+   return res.send('Olá Cleisson')
 });
+
+app.post('/testpost', (req, res) => {
+   return res.send('Olá Cleisson method POST')
+})
 
 // http://localhost:3000
 app.listen(3000, () => console.log('Server running...'))
